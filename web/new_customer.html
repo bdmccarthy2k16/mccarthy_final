@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>New Customer Sign Up :: Titan Online Banking Application</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="toba-styles.css" />
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+</head>
+
+<body>
+    <div>       
+            <header>
+                <img src="titan-header.png" alt="Titan Online Banking Application" title="Titan Online Banking Application" />
+            </header>
+            <main>
+                <h2 class="home-options">
+                    Please provide the following information to create your online account:
+                </h2>
+                <form action="newCustomer" method="post" class="login-form">
+                    <p><em>$(message)</em></p>
+                    <p>
+                        <label for="firstName">First Name: </label><br />
+                        <input type="text" name="firstName" size="40" />                        
+                    </p>
+                    <p>
+                        <label for="lastName">Last Name: </label><br />
+                        <input type="text" name="lastName" size="40" />                        
+                    </p>
+                    <p>
+                        <label for="phone">Phone: </label><br />
+                        <input type="tel" name="phone" size="40" />                        
+                    </p>
+                    <p>
+                        <label for="address">Address: </label><br />
+                        <input type="text" name="address" size="40" />                        
+                    </p>
+                    <p>
+                        <label for="city">City: </label><br />
+                        <input type="text" name="city" size="40" />                        
+                    </p>
+                    <p>
+                        <label for="state">State: </label><br />
+                        <input type="text" name="state" size="40" />                        
+                    </p>
+                    <p>
+                        <label for="zipCode">ZIP Code: </label><br />
+                        <input type="text" name="zipCode" size="40" />                        
+                    </p>
+                    <p>
+                        <label for="email">Email: </label><br />
+                        <input type="email" name="email" size="40" />                        
+                    </p>
+                    <p>
+                        <input type="submit" value="Create New Customer" />
+                    </p>
+                </form>
+                <p class="home-options">
+                    <a href="index.html">Return Home</a>
+                </p>
+            </main>
+        
+    </div>
+</body>
+</html>

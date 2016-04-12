@@ -1,0 +1,52 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 27, 2016, 3:30:31 PM
+    Author     : Bernadette McCarthy
+*/
+
+body{    
+    background-color:#000000;
+    color:#ffffff;
+    font-family:arial,sans-serif;
+    font-size:16px;
+}
+
+a:link, a:visited {
+    color:#ffffff;
+    text-decoration:none;
+}
+a:hover,a:active {
+    color:#5dc7b5;
+    text-decoration:underline;
+}
+header {
+    width: 60%;
+    max-width:800px;
+    max-height:150px;
+    text-align:center;
+    margin:0 auto;
+    color:#fff;
+}
+main {
+    max-width:800px;
+    width:100%;
+    margin:0 auto;
+}
+.home-options {
+    text-align:center;
+}
+.login-form {
+    max-width:70%;
+    margin: 0 auto;
+    text-align:center;
+}
+.success {
+    text-align:center;
+}
+.success a:link, .success a:visited {
+    color:#5dc7b5;
+}
