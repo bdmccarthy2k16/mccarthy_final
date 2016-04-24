@@ -25,8 +25,13 @@ public class LoginServlet extends HttpServlet {
             String username = request.getParameter("username");
             String password = request.getParameter("password");
             
-            if (username.equals("jsmith@toba.com")) {
-                url = "/account_activity.html";
+            if(username.equals("jsmith@toba.com")) {
+                if(password.equals("letmein")) {
+                    url = "/account_activity.html";
+                }
+                else {
+                    url ="/login_failure.html";
+                }
             }
             else {
                 url ="/login_failure.html";

@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
-                        http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
         <servlet-name>LoginServlet</servlet-name>
         <servlet-class>TOBA.login.LoginServlet</servlet-class>
@@ -17,7 +14,7 @@
     </welcome-file-list>
     <servlet>
         <servlet-name>NewCustomerServlet</servlet-name>
-        <servlet-class>murach.email.NewCustomerServlet</servlet-class>
+        <servlet-class>TOBA.login.NewCustomerServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>NewCustomerServlet</servlet-name>
@@ -25,10 +22,10 @@
     </servlet-mapping>
     <error-page>
         <error-code>404</error-code>
-        <location>error_404.jsp</location>
+        <location>/error_404.jsp</location>
     </error-page>
     <error-page>
         <exception-type>java.lang.Throwable</exception-type>
-        <location>error_java.jsp</location>
+        <location>/error_java.jsp</location>
     </error-page>
 </web-app>
