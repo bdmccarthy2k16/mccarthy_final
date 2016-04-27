@@ -18,7 +18,7 @@ public class TransactionServlet extends HttpServlet {
                           HttpServletResponse response) 
                           throws ServletException, IOException {
 
-        String url = "/index.html";
+        String url = "/index.jsp";
     }    
     
     @Override

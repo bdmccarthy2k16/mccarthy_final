@@ -1,5 +1,6 @@
 package TOBA.login;
 
+import TOBA.business.User;
 import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -11,7 +12,7 @@ public class NewCustomerServlet extends HttpServlet {
                           HttpServletResponse response) 
                           throws ServletException, IOException {
 
-        String url = "/new_customer.html";
+        String url = "/new_customer.jsp";
 
         // get current action
         String action = request.getParameter("action");
@@ -29,16 +30,21 @@ public class NewCustomerServlet extends HttpServlet {
             String city = request.getParameter("city");
             String state = request.getParameter("state");
             String zipCode = request.getParameter("zipCode");
+            String email = request.getParameter("email");
+            String username = request.getParameter("username");
+            String password = request.getParameter("password");
+            
+            User user = new User(firstName, lastName, email);
             
             // validate that data was submitted
             String message;
-            if (firstName == null || lastName == null || phone == null || address == null || city == null || state == null || zipCode == null || firstName.isEmpty() || lastName.isEmpty() || phone.isEmpty() || address.isEmpty() || state.isEmpty() || zipCode.isEmpty()) {
+            if (firstName == null || lastName == null || phone == null || address == null || city == null || state == null || zipCode == null || username == null || password == null || firstName.isEmpty() || lastName.isEmpty() || phone.isEmpty() || address.isEmpty() || state.isEmpty() || zipCode.isEmpty() || username.isEmpty() || password.isEmpty()) {
                 message = "Please fill out all the form fields.";
-                url = "/new_customer.html";
+                url = "/new_customer.jsp";
             }
             else {
                 message = "";
-                url = "/success.html";
+                url = "/success.jsp";
             }
         }
         

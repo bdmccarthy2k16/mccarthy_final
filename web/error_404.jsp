@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="toba-styles.css" />
-        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-        <title>Page Not Found :: Titan Online Banking Application</title>
-    </head>
-    <body>
+<%@page contentType="text/html" pageEncoding="utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:import url="/includes/header.html" />
     <div>       
             <header>
                 <img src="titan-header.png" alt="Titan Online Banking Application" title="Titan Online Banking Application" />
@@ -17,10 +10,10 @@
                     Looking for something?
                 </h2>
                 <p class="home-options">
-                    Looks like you're looking for a page that doesn't exist. Please <a href="index.html">click here to return to the home page and try again.</a>
+                    Looks like you're looking for a page that doesn't exist. Please <a href="index.jsp">click here to return to the home page and try again.</a>
                 </p>
             </main>
         
     </div>
-    </body>
-</html>
+
+<c:import url="/includes/footer.jsp" />

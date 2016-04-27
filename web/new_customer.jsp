@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-        <title>New Customer Sign Up :: Titan Online Banking Application</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="toba-styles.css" />
-        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-</head>
+<%@page contentType="text/html" pageEncoding="utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:import url="/includes/header.html" />
 
-<body>
     <div>       
             <header>
                 <img src="titan-header.png" alt="Titan Online Banking Application" title="Titan Online Banking Application" />
@@ -18,7 +11,15 @@
                     Please provide the following information to create your online account:
                 </h2>
                 <form action="newCustomer" method="post" class="login-form">
-                    <p><em>$(message)</em></p>
+                    <p>
+                        <c:if test="${message != null}">
+                            <p><i>${message}</i></p>
+                        </c:if>
+    
+
+<c:if test="${message != null}">
+    <p><i>${message}</i></p>
+</c:if></p>
                     <p>
                         <label for="firstName">First Name: </label><br />
                         <input type="text" name="firstName" size="40" />                        
@@ -48,6 +49,14 @@
                         <input type="text" name="zipCode" size="40" />                        
                     </p>
                     <p>
+                        <label for="username">Username: </label><br />
+                        <input type="text" name="username" size="40" />                        
+                    </p>
+                    <p>
+                        <label for="password">Password: </label><br />
+                        <input type="password" name="psasword" size="40" />                        
+                    </p>
+                    <p>
                         <label for="email">Email: </label><br />
                         <input type="email" name="email" size="40" />                        
                     </p>
@@ -56,10 +65,10 @@
                     </p>
                 </form>
                 <p class="home-options">
-                    <a href="index.html">Return Home</a>
+                    <a href="index.jsp">Return Home</a>
                 </p>
             </main>
         
     </div>
-</body>
-</html>
+
+<c:import url="/includes/footer.jsp" />

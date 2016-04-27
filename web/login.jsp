@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Login :: Titan Online Banking Application</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="toba-styles.css" />
-        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-    </head>
-
-<body>
+<%@page contentType="text/html" pageEncoding="utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:import url="/includes/header.html" />
     <div>       
             <header>
                 <img src="titan-header.png" alt="Titan Online Banking Application" title="Titan Online Banking Application" />
@@ -31,12 +23,11 @@
                     </p>
                 </form>
                 <p class="home-options">
-                    <a href="index.html">Return Home</a>
+                    <a href="index.jsp">Return Home</a>
                     <br />
-                    <a href="new_customer.html">New Customer Sign Up</a>
+                    <a href="new_customer.jsp">New Customer Sign Up</a>&nbsp;&nbsp;|&nbsp;&nbsp;                    <a href="password_reset.jsp">Reset Password</a>
                 </p>
             </main>
         
     </div>
-</body>
-</html>
+<c:import url="/includes/footer.jsp" />

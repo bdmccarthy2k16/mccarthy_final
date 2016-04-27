@@ -50,3 +50,10 @@ main {
 .success a:link, .success a:visited {
     color:#5dc7b5;
 }
+.copyright {
+    color:#5dc7b5;
+    font-size:14px;
+    text-align:center;
+    width:60%;
+    margin: 0 auto;
+}

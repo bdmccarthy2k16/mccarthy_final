@@ -11,7 +11,7 @@ public class LoginServlet extends HttpServlet {
                           HttpServletResponse response) 
                           throws ServletException, IOException {
 
-        String url = "/login.html";
+        String url = "/login.jsp";
 
         // get current action
         String action = request.getParameter("action");
@@ -27,14 +27,14 @@ public class LoginServlet extends HttpServlet {
             
             if(username.equals("jsmith@toba.com")) {
                 if(password.equals("letmein")) {
-                    url = "/account_activity.html";
+                    url = "/account_activity.jsp";
                 }
                 else {
-                    url ="/login_failure.html";
+                    url ="/login_failure.jsp";
                 }
             }
             else {
-                url ="/login_failure.html";
+                url ="/login_failure.jsp";
             }
         }
         
