@@ -17,11 +17,11 @@ public class NewCustomerServlet extends HttpServlet {
         // get current action
         String action = request.getParameter("action");
         if (action == null) {
-            action = "new_customer";  // default action
+            action = "NewCustomer";  // default action
         }
 
         // perform action and set URL to appropriate page
-        if (action.equals("new_customer")) {                
+        if (action.equals("newCustomer")) {                
             // get parameters from the request
             String firstName = request.getParameter("firstName");
             String lastName = request.getParameter("lastName");
@@ -34,15 +34,16 @@ public class NewCustomerServlet extends HttpServlet {
             String username = request.getParameter("username");
             String password = request.getParameter("password");
             
-            User user = new User(firstName, lastName, email);
-            
             // validate that data was submitted
             String message;
             if (firstName == null || lastName == null || phone == null || address == null || city == null || state == null || zipCode == null || username == null || password == null || firstName.isEmpty() || lastName.isEmpty() || phone.isEmpty() || address.isEmpty() || state.isEmpty() || zipCode.isEmpty() || username.isEmpty() || password.isEmpty()) {
                 message = "Please fill out all the form fields.";
                 url = "/new_customer.jsp";
             }
-            else {
+            else {            
+                User user = new User(firstName, lastName, phone, address, city, state, zipCode,email); 
+                HttpSession session = request.getSession();
+                session.setAttribute("user",user);
                 message = "";
                 url = "/success.jsp";
             }

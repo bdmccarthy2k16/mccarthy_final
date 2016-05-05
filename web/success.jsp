@@ -10,8 +10,18 @@
                     Success!
                 </h2>
                 <p class="success">
-                    You have successfully created a new customer account. Please <a href="login.jsp">click here</a> to login.
+                    Account successfully created!
                 </p>
+                <p>Username: $(user.username)</p>
+                <p>Password: $(user.password)</p>
+                <p>First Name: $(user.firstName)</p>
+                <p>Last Name: $(user.lastName)</p>
+                <p>Phone: $(user.phone)</p>
+                <p>Address: $(user.address)</p>
+                <p>City: $(user.city)</p>
+                <p>State: $(user.state)</p>
+                <p>ZIP Code: $(user.zipCode)</p>
+                <p>Email: $(user.email)</p>
             </main>
         
     </div>

@@ -6,7 +6,14 @@
                 <img src="titan-header.png" alt="Titan Online Banking Application" title="Titan Online Banking Application" />
             </header>
             <main>
-                
+                <p>Submit the form below to reset your password:</p>
+                <form action="reset" method=post">
+                    <p>
+                        <label for="password">New Password: </label>
+                        <input type="password" name="password" />
+                    </p>
+                    
+                </form>
             </main>
         
     </div>
